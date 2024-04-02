@@ -27,7 +27,7 @@ public class GreetingController {
         return greetingService.sayHello();
     }
 
-    @GetMapping("/ByName")
+   @GetMapping("/ByName")
     public String greetingWithUserName(@RequestParam(value = "firstName", defaultValue = "") String firstName,
                                        @RequestParam(value = "lastName", defaultValue = "") String lastName) {
         return greetingService.greetingWithName(firstName, lastName);
@@ -57,5 +57,5 @@ public class GreetingController {
     public String deleteGreeting(@PathVariable Integer id){
         greetingService.deleteGreeting(id);
         return "Data Deleted Successfully";
-    }
+    } 
 }

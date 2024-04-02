@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greetingapp
+  labels:
+    app: greetingapp
+    tier: greetingapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: greetingapp
+      tier: greetingapp
+  template:
+    metadata:
+      labels:
+        app: greetingapp
+        tier: greetingapp
+    spec:
+      containers:
+      - name: greetingapp
+        image: greetingapp
+        ports:
+        - name: http-server
+          containerPort: 8080
+        env:
+          - name: SECRET_KEY
+            value: "sdjfkjl84jjdCCvvss22845"

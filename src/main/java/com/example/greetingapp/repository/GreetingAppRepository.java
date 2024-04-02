@@ -1,3 +1,4 @@
+
 package com.example.greetingapp.repository;
 
 import com.example.greetingapp.model.Greeting;
